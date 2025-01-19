@@ -4455,8 +4455,13 @@ blockquote span {
 }
 
 .team .single-team .image img {
-  width: 100%;
+  width: auto; /* Makes the image fill the container width */
+  aspect-ratio: 2 / 2; /* Enforces a 2:3 ratio */
+  object-fit: cover; /* Ensures the image is cropped to fit without distortion */
+  display: block; /* Removes inline spacing issues */
 }
+
+
 
 .team .single-team .content {
   padding: 25px 30px 30px 30px;
@@ -4477,6 +4482,8 @@ blockquote span {
   display: block;
   margin-top: 4px;
 }
+
+
 
 @media only screen and (min-width: 768px) and (max-width: 991px),
   (max-width: 767px) {
